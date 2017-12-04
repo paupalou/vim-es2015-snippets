@@ -26,7 +26,7 @@ return ${0:result}
 endsnippet
 
 snippet : "Object Value JS"
-${1:key}: ${0:value},
+${1:key}: ${0:value},${2}
 endsnippet
 
 snippet :f "method: func(...) { ... }"
@@ -56,15 +56,13 @@ snippet =>> "Inline arrow function" A
 endsnippet
 
 snippet c=> "Const Function" bA
-const ${1:name} = (${2:args}) => {
-  return $4
-}${3:;}
+const ${1:name} = ${3(${2:args})} => $4
 endsnippet
 
 snippet expf "Export function" b
 export ${1:default }function ${2:name}($3) {
   $4
-};
+}
 endsnippet
 
 snippet fun* "Generator"
